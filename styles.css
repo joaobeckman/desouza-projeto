@@ -54,7 +54,6 @@ p {
   align-content: center;
   gap: clamp(30px, 5vw, 76px);
   padding: clamp(58px, 7vw, 96px) var(--page-x);
-  border-bottom: 1px solid var(--line);
   background:
     linear-gradient(90deg, rgba(2, 3, 3, 0.95) 0%, rgba(2, 3, 3, 0.68) 42%, rgba(2, 3, 3, 0.22) 100%),
     linear-gradient(0deg, rgba(2, 3, 3, 0.74) 0%, rgba(2, 3, 3, 0.08) 48%),
