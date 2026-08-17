@@ -234,6 +234,125 @@ h1 span:first-child {
   line-height: 1.25;
 }
 
+.results {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 92% 6%, rgba(244, 201, 80, 0.14), transparent 330px),
+    #090b0b;
+}
+
+.results-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 36px;
+}
+
+.results-heading .section-title {
+  max-width: 880px;
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.results-heading > p {
+  max-width: 280px;
+  margin-bottom: clamp(48px, 6vw, 80px);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(230px, 1fr));
+  gap: clamp(16px, 2vw, 26px);
+}
+
+.result-card {
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.035);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.result-image {
+  position: relative;
+  overflow: hidden;
+  background: #161616;
+}
+
+.result-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 14;
+  object-fit: cover;
+  transition: transform 280ms ease;
+}
+
+.before-after {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.before-after b {
+  padding: 7px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(2, 3, 3, 0.68);
+  backdrop-filter: blur(6px);
+}
+
+.before-after b:last-child {
+  border-color: rgba(244, 201, 80, 0.68);
+  color: var(--gold);
+}
+
+.result-copy {
+  padding: 18px 18px 20px;
+}
+
+.result-copy > span {
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.result-copy h3 {
+  margin-top: 7px;
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
+  line-height: 1.15;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(244, 201, 80, 0.48);
+}
+
+.result-card:hover img {
+  transform: scale(1.045);
+}
+
 .about-work {
   background: #050707;
   text-align: center;
@@ -363,6 +482,21 @@ h1 span:first-child {
 
   .showcase-grid {
     grid-template-columns: repeat(5, minmax(240px, 76vw));
+  }
+
+  .results-heading {
+    display: block;
+  }
+
+  .results-heading > p {
+    margin-top: -32px;
+  }
+
+  .results-grid {
+    grid-template-columns: repeat(4, minmax(240px, 72vw));
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-color: rgba(244, 201, 80, 0.62) rgba(255, 255, 255, 0.08);
   }
 }
 
